@@ -1,6 +1,6 @@
 (function(angular) {
   'use strict';
-angular.module('invoice1', [])
+angular.module('login', [])
   .controller('InvoiceController', function() {
     this.qty = 1;
     this.cost = 2;

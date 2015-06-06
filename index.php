@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Example - example-guide-concepts-2-production</title>
+  <title>Angular Login</title>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
   <script src="angular.js"></script>
 </head>
 <body >
-  <div ng-app="invoice1" ng-controller="InvoiceController as invoice">
+  <div ng-app="login" ng-controller="InvoiceController as invoice">
   <b>Invoice:</b>
   <div>
     Quantity: <input type="number" min="0" ng-model="invoice.qty" required >
