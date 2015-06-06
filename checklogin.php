@@ -3,7 +3,7 @@ $params = json_decode(file_get_contents('php://input'),true);
 $username = $params["username"];
 $hash     = $params["hash"];
 $users = array (
-    "brenton"  => array("salt" => "nosaltyet", "hash" => "0148600141959ca22640965b5eda51dc"),
+    "brenton"  => array("salt" => "nosaltyet", "hash" => "0148600141959ca22640965b5eda51dc"), // this is the hash of "verysafe"
     "james"    => array("salt" => "nosaltyet", "hash" => ""),
     "timothy"  => array("salt" => "nosaltyet", "hash" => ""),
 );
