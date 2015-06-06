@@ -20,6 +20,7 @@
   <div>
     <button class="btn" ng-click="login.authenticate()">Log In</button>
   </div>
+  <div>{{login.message}}</div>
 </div>
 </body>
 </html>
