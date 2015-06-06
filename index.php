@@ -10,10 +10,10 @@
   <div ng-app="login1" ng-controller="LoginController as login">
   <b>Please Log In:</b>
   <div>
-    Username: <input type="text" min="0" ng-model="login.username" required >
+    Username: <input type="text" ng-model="login.username" required >
   </div>
   <div>
-    Password: <input type="password" min="0" ng-model="login.password" required >
+    Password: <input type="password" ng-model="login.password" required >
   </div>
   <div>
     <button class="btn" ng-click="login.authenticate()">Log In</button>
