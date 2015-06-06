@@ -1,12 +1,13 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Example - example-guide-concepts-2-production</title>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+  <script src="angular.js"></script>
 </head>
-<body>
-<div ng-app="invoice1" ng-controller="InvoiceController as invoice">
+<body >
+  <div ng-app="invoice1" ng-controller="InvoiceController as invoice">
   <b>Invoice:</b>
   <div>
     Quantity: <input type="number" min="0" ng-model="invoice.qty" required >
@@ -25,6 +26,5 @@
     <button class="btn" ng-click="invoice.pay()">Pay</button>
   </div>
 </div>
-<script src="angular.js"></script>
 </body>
 </html>
