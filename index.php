@@ -25,5 +25,6 @@
     <button class="btn" ng-click="invoice.pay()">Pay</button>
   </div>
 </div>
+<script src="angular.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+console.log("hey");
 angular.module('invoice1', [])
 .controller('InvoiceController', function() {
   this.qty = 1;
