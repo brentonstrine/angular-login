@@ -1,3 +1,11 @@
+<!doctype html>
+<html lang="en" ng-app>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+</head>
+<body>
 <div ng-app="invoice1" ng-controller="InvoiceController as invoice">
   <b>Invoice:</b>
   <div>
@@ -17,3 +25,5 @@
     <button class="btn" ng-click="invoice.pay()">Pay</button>
   </div>
 </div>
+</body>
+</html>
