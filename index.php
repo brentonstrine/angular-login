@@ -8,22 +8,15 @@
 </head>
 <body >
   <div ng-app="login1" ng-controller="LoginController as login">
-  <b>Invoice:</b>
+  <b>Please Log In:</b>
   <div>
-    Quantity: <input type="number" min="0" ng-model="login.qty" required >
+    Username: <input type="text" min="0" ng-model="login.username" required >
   </div>
   <div>
-    Costs: <input type="number" min="0" ng-model="login.cost" required >
-    <select ng-model="login.inCurr">
-      <option ng-repeat="c in login.currencies">{{c}}</option>
-    </select>
+    Password: <input type="password" min="0" ng-model="login.password" required >
   </div>
   <div>
-    <b>Total:</b>
-    <span ng-repeat="c in login.currencies">
-      {{login.total(c) | currency:c}}
-    </span>
-    <button class="btn" ng-click="login.pay()">Pay</button>
+    <button class="btn" ng-click="login.authenticate()">Log In</button>
   </div>
 </div>
 </body>
