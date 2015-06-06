@@ -1,6 +1,8 @@
-console.log("hey");
+var count = 0;
+console.log("a",++count);
 angular.module('invoice1', [])
 .controller('InvoiceController', function() {
+  console.log("b",++count);
   this.qty = 1;
   this.cost = 2;
   this.inCurr = 'EUR';
@@ -21,3 +23,5 @@ angular.module('invoice1', [])
     window.alert("Thanks!");
   };
 });
+
+console.log("c",++count);
