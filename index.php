@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Angular Login</title>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+  <script src="http://crypto-js.googlecode.com/svn/tags/3.0.2/build/rollups/md5.js"></script>
   <script src="angular.js"></script>
 </head>
 <body >
