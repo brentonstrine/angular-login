@@ -14,11 +14,18 @@ angular.module('login1', [])
     };
     
     this.queryDatabase = function(username, hash) {
-          .success(function(data, status, headers, config) {
+        var promise = $http.post('checklogin.php', {'username':username.toString(), 'hash': hash.toString()})
+          .then(function (response) {
+              console.log("response is: " + response.data.toString());
+              return response.data.toString();
+            });
+        
+        if(promise=="true"){
                 console.log("successful login");
                 this.message = "Welcome, " + this.username;
             } else {
                 console.log("failed login");
+                console.log(this.document);
                 this.message = "That login info is not correct. Please try again.";
             }
     };
