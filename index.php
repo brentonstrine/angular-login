@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Angular Login</title>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+  <?php // found at http://stackoverflow.com/questions/1655769/fastest-md5-implementation-in-javascript ?>
   <script src="http://crypto-js.googlecode.com/svn/tags/3.0.2/build/rollups/md5.js"></script>
   <script src="angular.js"></script>
 </head>
