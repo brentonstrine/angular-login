@@ -19,7 +19,6 @@
   </div>
   <div>
     <button class="btn" ng-click="login.authenticate()">Log In</button>
-    <button class="btn" ng-click="login.updateMessage()">New Message</button>
   </div>
   <div>{{login.message}}</div>
 </div>
