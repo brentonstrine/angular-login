@@ -11,6 +11,7 @@
 <body >
   <div ng-app="login1" ng-controller="LoginController as login">
   <b>Please Log In:</b>
+  <p><small>The correct username &amp; password is <code>brenton</code> / <code>verysafe</code>.</small></p>
   <div>
     Username: <input type="text" ng-model="login.username" required >
   </div>
