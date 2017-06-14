@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bare-min Login</title>
+  <!-- Including strictly to get $.ajax -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- // found at http://stackoverflow.com/questions/1655769/fastest-md5-implementation-in-javascript and ultimately https://gist.github.com/PixnBits/8811212 -->
+  <script src="md5.js"></script>
+</head>
+<body >
+  <p><small>The correct username &amp; password is <code>brenton</code> / <code>verysafe</code>.</small></p>
+  <div>
+    Username: <input type="text" class="js-username" required>
+  </div>
+  <div>
+    Password: <input type="password" class="js-password" required>
+  </div>
+  <div>
+    <button class="js-loginButton">Log In</button>
+  </div>
+  <div class="js-loginMessage"></div>
+  <script src="main.js"></script>
+</body>
+</html>

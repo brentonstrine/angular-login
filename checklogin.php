@@ -1,7 +1,6 @@
 <?php
-$params = json_decode(file_get_contents('php://input'),true);
-$username = $params["username"];
-$hash     = $params["hash"];
+$username = $_POST['username'];
+$hash     = $_POST['hash'];
 $users = array (
     "brenton"  => array("salt" => "nosaltyet", "hash" => "0148600141959ca22640965b5eda51dc"),
     "james"    => array("salt" => "nosaltyet", "hash" => ""),
@@ -9,9 +8,9 @@ $users = array (
 );
 
 // for debugging. echo $username . " : " . $hash;
-if($users[$username]["hash"] == $hash){
-    echo "true";
+if($users[$username] && $users[$username]["hash"] && $users[$username]["hash"] == $hash){
+    echo "You are authenticated";
 } else {
-    echo "false";
+    echo "Wrong username or password.";
 }
 ?>
