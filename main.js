@@ -4,21 +4,32 @@ var loginButton = document.querySelector(".js-loginButton");
 var loginMessage = document.querySelector(".js-loginMessage");
 
 loginButton.addEventListener("click", function(){
-    authenticate(username.value, password.value);
+    getUserSalt(username.value);
 });
 
-var authenticate = function authenticate(username, password) {
-    var passhash = md5(password); // should be retrieving salt from DB based on username and then adding it to the PW before hashing, but i'll get to that later if there's time.
-    queryDatabase(username, passhash);
+var authenticate = function authenticate(username, password, salt) {
+    var saltedHash = md5(salt + password);
+    queryDatabase(username, saltedHash);
 };
 
 var queryDatabase = function(username, hash) {
     $.ajax({
         url: "checklogin.php",
         type: "POST",
-        data: {username: username, hash: hash},
+        data: {username: username, hash: hash, request: "authenticate"},
         success: function(data){
             window.loginMessage.textContent = data;
+        }
+    });
+};
+
+var getUserSalt = function(username, hash) {
+    $.ajax({
+        url: "checklogin.php",
+        type: "POST",
+        data: {username: username, request: "usersalt"},
+        success: function(data){
+            authenticate(username, password.value, data);
         }
     });
 };
